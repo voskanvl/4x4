@@ -12,12 +12,23 @@ block main
                     {name:"Улица", error: "Обязательное поле для заполнения"},
                     {name:"Дом", error: ""},
                     {name:"Квартира/офис", error: ""},
-                    {name:"E-mail (login)", error: ""},
+                    {name:"E-mail (login)", error: "Поле должно содержать корректный E-mail (login)"},
                     {name:"Пароль", error: "Обязательное поле для заполнения"},
                     {name:"Повторите пароль", error: "Пароли не совпадают"},
                 ]
             each i in data.slice(0,4)
                 +input(i.name+'<span>*</span>')
+                .registration__error= i.error
             .registration__row 
                 +input(data[4].name)
                 +input(data[5].name)
+            each i in data.slice(-3)
+                +input(i.name+'<span>*</span>')     
+                .registration__error= i.error
+
+            .registration__row.recaptcha 
+                p Здесь должна быть recaptcha
+                p После регистрации, на указанный Вами email придёт Ваш логин и пароль.
+            
+            button.registration__login Зарегистрироваться
+
