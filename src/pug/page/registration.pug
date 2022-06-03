@@ -2,17 +2,22 @@ extends ../layout/project.pug
 include ../../components/input/input.pug
 block main
     main.registration
-    h1.registration__title Форма регистрации
-    form.registration__form
-    - 
-        const data = [
-            {name:"Имя", error: "Обязательное поле для заполнения"},
-            {name:"Фамилия", error: "Обязательное поле для заполнения"},
-            {name:"Телефон", error: "Поле должно содержть корректный телефонный номер"},
-            {name:"Улица", error: "Обязательное поле для заполнения"},
-            {name:"Дом", error: ""},
-            {name:"Квартира/офис", error: ""},
-            {name:"E-mail (login)", error: ""},
-            {name:"Пароль", error: "Обязательное поле для заполнения"},
-            {name:"Повторите пароль", error: "Пароли не совпадают"},
-        ]
+        h1.registration__title Форма регистрации
+        form.registration__form
+            - 
+                const data = [
+                    {name:"Имя", error: "Обязательное поле для заполнения"},
+                    {name:"Фамилия", error: "Обязательное поле для заполнения"},
+                    {name:"Телефон", error: "Поле должно содержть корректный телефонный номер"},
+                    {name:"Улица", error: "Обязательное поле для заполнения"},
+                    {name:"Дом", error: ""},
+                    {name:"Квартира/офис", error: ""},
+                    {name:"E-mail (login)", error: ""},
+                    {name:"Пароль", error: "Обязательное поле для заполнения"},
+                    {name:"Повторите пароль", error: "Пароли не совпадают"},
+                ]
+            each i in data.slice(0,4)
+                +input(i.name+'<span>*</span>')
+            .registration__row 
+                +input(data[4].name)
+                +input(data[5].name)
