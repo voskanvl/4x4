@@ -1,0 +1,126 @@
+.card
+    font-family: Roboto, sans-serif
+    &__caption
+        font-size: 25px
+    &__volume
+        font-size: 16px
+        color: #92817B
+        margin-left: 22px
+    &__data
+        display: flex
+        @media screen and ( max-width: 768px )
+            flex-direction: column
+    &__list-products
+        flex: 1
+.product-item
+    display: grid
+    grid-template-columns: 1fr 2fr 6fr 119px 1fr
+    place-items: center
+    padding: 36px 0
+    border-bottom: 1px solid #E5ECF3
+    &__title, &__price
+        font-size: clamp(14px,1.5vw,16px)
+        font-weight: 600
+        @media screen and ( max-width: 768px )
+            font-size: 16px
+    &__title
+        justify-self: start
+        margin-left: 5px
+    &__close
+        border: none
+        background: none
+        cursor: pointer
+    &__img
+        width: 92px
+        height: 92px
+        & > img
+            width: 100%
+    &__counter
+        & > .counter
+            padding: 6px 10px
+            & > *:not(:last-child)
+                margin-right: 16px
+.info-panel
+    border-radius: 5px
+    border: 1px solid #E5ECF3
+    margin-left: 20px
+    padding: 30px
+    &__row
+        display: flex
+        justify-content: space-between
+        margin-bottom: 10px
+        font-size: clamp(11px,1.5vw,16px)
+        @media screen and ( max-width: 768px )
+            font-size: 16px
+    &__left
+        color: #92817B
+    &__total > &__left, &__total > &__right
+        font-size: clamp(12px,1.7vw,18px)
+        font-weight: 600
+        color: #000
+        @media screen and ( max-width: 768px )
+            font-size: 18px
+    &__checkout
+        border: none
+        background: #91BABE
+        border-radius: 2px
+        padding: 5px 28px
+        margin: 0 auto
+        cursor: pointer
+        margin-top: 43px
+
+    @media screen and ( max-width: 768px )
+        margin-left: 0
+    & .modal
+        display: none
+        align-items: center
+        justify-content: center
+
+.delivery-details
+    &__block
+        display: flex
+        font-size: clamp(11px, 1.5vw,16px)
+        @media screen and ( max-width: 768px )
+            font-size: 16px
+    &__value
+        color: #92817B
+        font-size: clamp(9px, 1.2vw,12px)
+        @media screen and ( max-width: 768px )
+            font-size: 12px
+    &__wrap
+        margin: 0 0 15px 10px
+
+.checkout-panel
+    background: #fff
+    border-radius: 7px
+    padding: 31px 44px
+    max-width: 731px
+    @media screen and ( max-width: 768px )
+        width: 90vw
+        margin: 0 auto
+    &__title
+        font-size: clamp(16px,3vw,22px)
+        max-width: 362px
+        margin-bottom: 61px
+        margin: 0 auto
+    &__controls
+        display: flex
+        align-items: center
+        & > button
+            padding: 11px 0
+            border: none
+            border-radius: 5px
+            width: 247px
+            cursor: pointer
+        & > span
+            margin: 0 34px
+        & > button.checkout-panel__login
+            background: #91babe
+            color: #fff
+        & > button.checkout-panel__nonelogin
+            background: #F0F1F4
+            color: #000
+        @media screen and ( max-width: 550px )
+            flex-direction: column
+            & > *
+                margin: 1em 0

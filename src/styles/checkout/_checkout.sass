@@ -1,0 +1,69 @@
+=fc
+    display: flex
+    align-items: center
+=center
+    +fc
+    justify-content: center
+=sb
+    +fc
+    justify-content: space-between
+=end
+    +fc
+    justify-content: flex-end
+=start
+    +fc
+    justify-content: flex-start
+.checkout
+    &__breadcrumbs
+        margin: 22px 0 61px
+    &__row
+        +start
+    &__panel
+        border-radius: 5px
+        border: 1px solid #E5ECF3
+        padding: 24px 36px
+    &__contacts
+        flex: 1
+        margin-bottom: 23px
+    &__status
+        margin-bottom: 32px
+    &__order
+        align-items: flex-start
+        column-gap: calc( 60 / 1920 * 100%)
+        @media screen and ( max-width: 768px )
+            flex-direction: column
+            row-gap: 23px
+            align-items: stretch
+    &__checkout
+        margin-bottom: 20px
+    & .checkbox
+        display: flex
+        &__label
+            font-size: clamp(11px, 1.5vw, 16px)
+    &__main
+        align-items: flex-end
+        column-gap: 23px
+        @media screen and ( max-width: 550px )
+            flex-direction: column
+            align-items: center
+            row-gap: 23px
+    &__main-left
+        flex: 1
+        & .input:not(:last-child)
+            margin-bottom: 32px
+            @media screen and ( max-width: 768px )
+    &__main-right > .checkbox:not(:last-child)
+        margin-bottom: 1em
+.contacts
+    &__title
+        font-size: 20px
+        font-weight: 500
+        margin: 0
+        margin-bottom: 32px
+
+    &__input:not(:last-child)
+        margin-bottom: 32px
+    & .checkbox__label
+        font-weight: 300
+.paymethod .checkbox
+    user-select: none

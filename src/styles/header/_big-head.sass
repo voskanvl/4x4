@@ -1,0 +1,30 @@
+@import "../_consts"
+.big-head
+    display: grid
+    grid-template-areas: "leftEl searchEl rightEl"
+    grid-template-columns: 1fr 1fr 1fr
+    place-items: center
+    margin-bottom: 21px
+    &__left
+        display: flex
+        align-items: center
+        grid-area: leftEl
+        color: #000
+        text-decoration: none
+    &__right
+        place-self: center end
+        grid-area: rightEl
+    &__search
+        grid-area: searchEl
+    &__title
+        padding-left: 32px
+        line-height: 25px
+    &__phone
+        font-size: 18px
+        font-weight: bold
+    &__call > a
+        color: $color__green
+        font-size: 16px
+        font-weight: lighter
+    &__logo
+        margin-left: -7px

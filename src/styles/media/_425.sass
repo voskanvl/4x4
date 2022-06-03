@@ -1,0 +1,103 @@
+@import "../_consts"
+@media screen and (max-width: 425px)
+    .big-head
+        grid-template-columns: 1fr
+        grid-template-areas: "leftEl" "rightEl" "searchEl"
+    .big-head__title
+        font-size: 12px
+        font-weight: 600
+    .big-head__right
+        place-self: center
+        margin-bottom: 2em
+    .big-head__call
+        & > a
+            width: 100%
+            text-align: center
+            display: block
+    .panel
+        padding: 1rem
+        &__title
+            font-size: 16px
+        &__body
+            font-size: 14px
+        &__price-f25
+            font-size: 16px
+        &__price-f20
+            font-size: 15px
+        &__price-f20
+            font-size: 15px
+        &__price
+            margin-bottom: 0
+    .discount__img
+        transform: scale(0.4) translate(71%, -57%)
+        top: -1rem
+    .oil1__img
+        transform: scale(0.7)
+
+    .mark
+        width: 44px
+        height: 25px
+    .about
+        &__wrap
+            margin: 40px auto 40px 0
+        &__body > p
+            font-size: 14px
+        &__img
+            transform: translateX(20%)
+    .footer-header
+        &__text
+            font-size: 14px
+        &__input
+            width: 50%
+
+    .brand
+        &__img
+            width: 130px
+            margin: 20px
+            margin-bottom: 10px
+            & > img
+                width: 100%
+        &__title
+            font-size: 18px
+            width: unset
+    .brands
+        margin: 0 -1rem
+        &__wrap
+            gap: 2px
+        & > h2
+            text-align: center
+
+    .catalog
+        padding: 1rem
+        position: absolute
+        opacity: 0
+        z-index: 3
+        background: #fffd
+        border-radius: 3px
+        margin-top: 1rem
+        z-index: -1
+        &__item
+            background: $color__white
+
+    .sub-menu
+        &__content, &__container
+            background: transparent
+    .sub-menu__content > .catalog__itembody
+        background: $color__white
+
+    .oil1__img
+        bottom: 0
+
+    .slider-top
+        flex-direction: column
+    .category__main .category__pagination
+        font-size: 15px
+        text-align-last: center
+    .card__list-products .product-item
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-evenly
+        align-items: center
+        row-gap: 1em
+        & .product-item__title
+            text-align: center

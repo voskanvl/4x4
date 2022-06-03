@@ -1,0 +1,66 @@
+@import "./_consts"
+
+.catalog
+    padding: 0 0.5em
+    display: flex
+    flex-direction: column
+    // margin: 0
+    margin-right: 15px
+    padding-inline-start: 0
+    grid-area: catalog
+    transition: opacity 0.8s ease
+    background: #fff
+    z-index: 2
+
+    &__item
+        list-style: none
+        position: relative
+        display: block
+
+    &__itembody
+
+        box-sizing: border-box
+        width: 100%
+        max-width: $width__catalog
+        border-radius: 3px
+        border: 1px solid #E5ECF3
+        padding: 1rem
+        display: flex
+        justify-content: space-between
+        align-items: center
+        transition: background 0.2s ease
+
+        & > .middle
+            width: 100%
+
+        & > .expand-arrow__pic-close > svg, & > .expand-arrow__pic-open > svg
+            stroke: black
+        & > a
+            color: currentColor
+            text-decoration: none
+            cursor: pointer
+            &::after
+                content: ""
+                position: absolute
+                inset: 0
+        & > a:first-child
+            overflow: hidden
+            white-space: nowrap
+            text-overflow: ellipsis
+        &:hover
+            background: $color__red-opacity
+            border: 1px solid transparent
+
+    &__item:not(:last-child)
+        margin-bottom: 10px
+    &__item.sub-menu__container
+        flex-direction: column
+
+    &__item .sub-menu__content
+        display: none
+        margin: 10px 0 0px
+        padding-left: 0
+        &_show
+            display: block
+        & .catalog__itembody
+            padding: 8px

@@ -1,0 +1,180 @@
+=center
+    display: flex
+    align-items: center
+    justify-content: center
+=sb
+    display: flex
+    align-items: center
+    justify-content: space-between
+=start
+    display: flex
+    align-items: center
+    justify-content: start
+main.product
+    padding-top: 22px
+    margin-left: 1em
+.product-resume
+    &__wrapper
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: space-between
+        @media screen and ( max-width: 768px )
+            flex-direction: column
+            margin-bottom: 2em
+
+    &__stars
+        display: flex
+        align-items: center
+        justify-content: center
+    &__details
+        display: grid
+        grid-template-columns: repeat(2,1fr)
+        margin-bottom: 44px
+        border-top: 1px solid #92817B
+        @media screen and ( max-width: 1024px )
+            grid-template-columns: 1fr
+            padding-top: 26px
+    &__image
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-right: calc( 88 / 1920 * 100%)
+        & button.splide__arrow--prev
+            transform: translate(-50%,-150%)
+            background: none
+        & button.splide__arrow--next
+            transform: translate(-50%,150%)
+            background: none
+
+    &__img
+        margin-right: 20px
+        @media screen and ( max-width: 550px )
+            width: 200px
+            margin: 0 auto
+
+    &__carousel
+        // transform: rotate(-90deg)
+        transform-origin: center
+        & > .carousel-item
+            //временно
+            width: 100px
+            height: 100px
+            background: #eee
+            text-align: center
+            & > *
+                transform: rotate(-90deg)
+
+    &__slider
+
+    &__upblock
+        +sb
+        margin-bottom: 69px
+        @media screen and ( max-width: 550px )
+            flex-direction: column
+    &__upblock-left
+        & > *:not(:last-child)
+            margin-bottom: 1em
+            @media screen and ( max-width: 550px )
+                text-align: center
+    &__data-controls
+        +start
+        & > .counter
+            margin-right: 24px
+            padding: 6px 18px
+    &__price
+        font-size: 40px
+        font-weight: 600
+        @media screen and ( max-width: 1024px )
+            font-size: 36px
+
+    &__description
+        font-size: 18px
+        font-weight: 600
+        & > p
+            font-size: 16px
+            font-weight: 200
+    &__title
+        font-size: 25px
+        @media screen and ( max-width: 768px )
+            font-size: clamp(17px,3.5vw,25px)
+            text-align: center
+    &__crumbs
+        // font-size: clamp(11px,2vw,14px)
+        // & > a
+        //     color: #92817B
+        //     text-decoration: none
+    &__busket
+        border-radius: 2px
+        color: #fff
+        background: #91BABE
+        border: none
+        width: 116px
+        height: 30px
+
+    &__vendor
+        &_strong
+    &__brand
+        @media screen and ( max-width: 550px )
+            text-align: center
+
+.product-description
+    &__tabs
+        // position: absolute
+        left: 0
+        right: 0
+        +start
+        background: #3D4144
+        // margin-right: -21%
+        padding-left: calc( 300 / 1920 * 100%)
+        @media screen and ( max-width: 1024px )
+            padding-left: 1em
+        @media screen and ( max-width: 425px )
+            padding-left: 0em
+
+    &__tab
+        color: #fff
+        padding: 20px clamp(9px,2vw,55px)
+        cursor: pointer
+        font-size: clamp(12px,2vw,16px)
+        &.active
+            background: #91BABE
+    &__body
+        width: 100%
+        background: #F3F4F6
+        // position: absolute
+        left: 0
+        right: 0
+        // transform: translateY(58px)
+        height: 309px
+        margin-right: -21%
+        overflow-y: auto
+        font-size: clamp(12px,2vw,16px)
+    &__body-container
+        display: none
+        max-width: 1319px
+        margin: 0px calc( 300 / 1920 * 100%) 0
+        padding-top: 25px
+        &.active
+            display: block
+        @media screen and ( max-width: 1024px )
+            margin: 0px 1em 0
+
+.product-recent
+    // position: absolute
+    top: calc( 58px + 25px + 284px)
+    left: 0
+    right: 0
+    max-width: 1319px
+    margin: 0 auto
+    &__container
+        +center
+        overflow: auto
+    &__title
+        font-size: 30px
+        font-weight: 600
+
+#main-slider-track
+    width: 400px
+    @media screen and ( max-width: 768px )
+        width: 200px

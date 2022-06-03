@@ -1,0 +1,163 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic)
+@import "./_consts"
+@import "./header/_lk"
+@import "./header/_basket"
+@import "./_expand-arrow"
+@import "./main"
+@import "./catalog"
+@import "./_panel"
+@import "./banner/_banner"
+@import "./_brand"
+@import "./header/_head"
+@import "./header/_big-head"
+@import "./header/_big-button"
+@import "./_container"
+@import "./header/_main-head"
+@import "./header/_search"
+@import "./header/_geo"
+@import "./header/_menu"
+@import "./header/_navbar"
+@import "./top/_top"
+@import "./about/_about"
+@import "./news/_news"
+@import "./footer/_footer"
+@import "./footer/_developer"
+@import "./media/_1024"
+@import "./media/_768"
+@import "./media/_588"
+@import "./media/_425"
+@import "./media/_320"
+@import "./modal/_modal"
+
+// @import "./_its"
+@import "./_material-carousel"
+// @import "../components/range/range"
+@import "./product/_product"
+@import "./_splidejs"
+@import "./basket/_basket"
+@import "./_category"
+@import "./checkout/_checkout"
+@import "../components/input/_input"
+@import "./_registration"
+=fc
+    display: flex
+    align-items: center
+=center
+    +fc
+    justify-content: center
+=sb
+    +fc
+    justify-content: space-between
+=end
+    +fc
+    justify-content: flex-end
+
+*,*::before,*::after
+    box-sizing: border-box
+
+body
+    font-family: 'Roboto', sans-serif
+    padding: 0
+    margin: 0
+    overflow-x: hidden
+    color: $color__black-super
+
+h2
+    font-size: 25px
+    font-weight: 400
+    color: $color__black-super
+
+button[disable="true"]
+    opacity: 0.2
+    pointer-events: none
+
+.slider__container
+    width: 100%
+.slider-novelty
+    width: 100%
+    & .indicators
+        position: absolute
+        bottom: 0
+        padding: 0
+        transform: translateY(150%)
+    & > .carousel-novelty
+        overflow: unset
+        // overflow-x: hidden
+.container-slider
+    width: 100%
+.slider-news
+    display: flex
+    align-items: center
+.slider__control
+    height: 28px
+    width: 28px
+    border: none
+    cursor: pointer
+    &[data-slide="prev"]
+        background: transparent url("../assets/svg/prev.svg") no-repeat
+    &[data-slide="next"]
+        background: transparent url("../assets/svg/next.svg") no-repeat
+        background-position: 100% 0
+
+article.main
+    @import "../components/range/range"
+.options
+    width: 100%
+    border: 1px solid #E5ECF3
+    border-radius: 3px
+    &__caption
+        margin-bottom: 11px
+    &__price
+        border-bottom: 1px solid #E5ECF3
+        height: 95px
+        padding: 11px 17px
+    &__vendors
+        margin: 10px 0
+        padding: 11px 17px
+    &__vendor:not(:last-child)
+        margin-bottom: 16px
+
+.middle
+    margin-top: 20px
+
+.checkbox
+    $size: 13px
+    $check: 11px
+    $color: #FAAC3D
+    position: relative
+    & > input[type="checkbox"]
+        position: relative
+        margin-right: 1em
+        &::before
+            content: ""
+            position: absolute
+            z-index: 2
+            border: solid $color
+            border-width: 1px
+            width: $size
+            height: $size
+            border-radius: 2px
+            background: #fff
+        &::after
+            content: ""
+            box-sizing: border-box
+            position: absolute
+            z-index: 3
+            width: $check
+            height: calc($check / 1.5)
+            border-left: solid #fff
+            border-left-width: calc($check / 3)
+            border-bottom: solid #fff
+            border-bottom-width: calc($check / 3)
+            transform: rotate(-50deg) translate(10%,30%) skewX(-10deg)
+            transform-origin: center
+            opacity: 0
+        &:checked::before
+            background: $color
+        &:checked::after
+            opacity: 1
+.crumbs
+    font-size: clamp(11px,2vw,14px)
+    & > a
+        color: #92817B
+        text-decoration: none

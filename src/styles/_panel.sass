@@ -1,0 +1,54 @@
+@import "./_consts"
+.panel
+    position: relative
+    background: $color__grey
+    border-radius: 5px
+    padding: 32px
+
+    &__title
+        margin-bottom: 25px
+        mix-blend-mode: darken
+        &-f25
+            font-size: 25px
+        &-f18
+            font-size: 18px
+        &-f20
+            font-size: 20px
+    &__price
+        margin-bottom: 25px
+        &-f25
+            font-size: 25px
+        &-f20
+            font-size: 20px
+        &::after
+            content: "\20BD"
+            font-family: Roboto, sans-serif
+    &__body
+        color: #ACA6A6
+        margin-bottom: 75px
+        mix-blend-mode: multiply
+    &__label
+        margin-bottom: 25px
+        text-transform: uppercase
+        font-size: 25px
+        letter-spacing: -1px
+        mix-blend-mode: darken
+
+    & .mark
+        box-sizing: border-box
+        margin-bottom: 41px
+        font-size: 25px
+        color: #fff
+        background: $color__green
+        width: 88px
+        height: 49px
+        border-radius: 5px
+        display: flex
+        justify-content: center
+        align-items: center
+        &::after
+            content: "%"
+            font-family: Roboto, sans-serif
+            mix-blend-mode: hard-light
+        & > span
+            mix-blend-mode: hard-light

@@ -1,0 +1,29 @@
+@import "../_consts"
+@import "./_time"
+.news-card
+    max-width: 300px
+    border-radius: 5px
+    border: 1px solid $color__grey
+    overflow: hidden
+    font-size: 14px
+    display: inline-block
+    &:not(:last-child)
+        margin-right: 27px
+    &__img
+        padding: 65px 101px
+        // padding: 25%
+        background: $color__gray1
+        display: flex
+        justify-content: center
+        align-items: center
+    &__body
+        padding: 21px 14px
+    &__title
+        font-size: 20px
+        white-space: normal
+    &__text
+        margin-bottom: 40px
+        white-space: normal
+    &__referense
+        font-size: 14px
+        color: $color__green

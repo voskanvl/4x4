@@ -1,0 +1,55 @@
+// @import "./_chief-slider"
+@import "./_consts"
+.slider,.slider-news,.slider-novelty
+    display: flex
+.slider__control
+    background: none
+    border: none
+    cursor: pointer
+    padding: 1rem
+    @media screen and ( max-width: 320px )
+        padding: 0.2rem
+    &_hide
+        display: block
+        opacity: 0.5
+.container-slider
+    max-width: $width__max
+    margin: 0 auto
+
+    @media screen and ( max-width: 425px )
+        width: 100%
+
+.slider__container
+    padding-left: 0
+    padding-right: 0
+
+.slider__items
+    counter-reset: slide
+
+.slider__item
+    flex: 0 0 33.33%
+    // max-width: 33.33%
+    counter-increment: slide
+    // height: 448px
+    position: relative
+    padding: 0 .5rem
+    &:not(:last-child)
+        // margin-right: 1rem
+
+    &::before
+        // content: counter(slide) "/6"
+        position: absolute
+        top: 10px
+        right: 20px
+        color: #fff
+        font-style: italic
+        font-size: 32px
+        font-weight: bold
+        display: block
+    &_100
+        flex: 0 0 100%
+
+.slider__indicators li
+    height: 12px
+    width: 12px
+    border-radius: 50%

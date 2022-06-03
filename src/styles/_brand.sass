@@ -1,0 +1,38 @@
+@import "./_consts"
+
+.brands
+    grid-area: brands
+    &__wrap
+        display: flex
+        flex-wrap: wrap
+        width: 100%
+        gap: 48px
+        align-items: flex-start
+        justify-content: center
+.brand
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    cursor: pointer
+    text-decoration: none
+
+    &__img
+        width: 175px
+        height: 141px
+        margin-bottom: 12px
+        border: 1px solid $color__grey
+        border-radius: 5px
+        display: grid
+        place-items: center
+        transition: box-shadow 0.4s ease
+        & > img
+            // width: 100%
+        &:hover
+            box-shadow: 0 4px 4px #0004
+    &__title
+        width: 175px
+        text-align: center
+        color: $color__black-super
+        font-size: 20px
+        text-decoration: inherit

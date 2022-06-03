@@ -1,0 +1,17 @@
+@import "../_consts"
+.counter
+    background: $color__gray2
+    display: flex
+    align-items: center
+    color: $color__brown
+    font-size: 16px
+    padding: 9px 16px
+    border-radius: 2px
+    & > *:not(:last-child)
+        margin-right: 25px
+    &__minus,&__plus
+        border: none
+        background: inherit
+        display: flex
+        justify-content: center
+        align-items: center

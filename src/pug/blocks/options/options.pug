@@ -1,0 +1,13 @@
+mixin options(arr)
+    .options
+        .options__price 
+            .options__caption Стоимость
+            include ../../../components/range/range.pug
+        .options__vendors 
+            .options__caption Производитель
+            each i in arr 
+                .options__vendor
+                    .checkbox
+                        .checkbox__box
+                        input.checkbox__input(type="checkbox" name="vendor")
+                        label.checkbox__label= i

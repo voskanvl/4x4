@@ -1,0 +1,76 @@
+extends ../layout/regular.pug
+include ../../components/product-card/product-card.pug
+include ../mixins/menuItem.pug
+include ../mixins/oil.pug
+include ../blocks/main/catalog.pug
+
+block page 
+    .container
+        header.main-head
+            header.main-head__head.head
+                .head__left
+                    include ../blocks/header/geo.pug
+                    include ../blocks/header/up-menu.pug
+                .main-head__body.big-head
+                    include ../blocks/header/big-head/big-head__left.pug
+                    include ../blocks/header/big-head/big-head__search.pug
+                    include ../blocks/header/big-head/big-head__right.pug
+            .main-head__navbar.navbar
+                include ../blocks/navbar/navbar.pug
+        article.main
+            +catalog
+            section.general
+                section.banner
+                    include ../blocks/main/panel/discount.pug
+                    include ../blocks/main/panel/novelty.pug
+                    .panel.oil1
+                        +oil("../../assets/runva-ewb-315x260 1.png","2 200")
+                    .panel.oil2
+                        +oil("../../assets/nturi-ru-upload-iblock-e99-e9970a2d55434ca0451cf800511bed2d-315x260 1.png","2 120","Фара дальнего света РИФ 160 мм 18W LED")
+            section.brands
+                include ../blocks/brands.pug
+        article.top
+            .container-slider
+                .slider-top
+                    .top-carousel__leftside
+                        h1.top__title Топ товаров
+                        .top-controls
+                            button.slider__control(href="#" data-slide="prev")
+                            button.slider__control(href="#" data-slide="next")
+                    .slider__container
+                        .carousel.carousel-top
+                            - 
+                                const arr = [
+                                    {img:"../../assets/top-products/Rectangle 46.png",price:"10 140",name:"Домкрат реечный Hi-lift 120см (чугун)",presence:"true"},
+                                    {img:"../../assets/top-products/Rectangle 47.png",price:"9 250",name:"Домкрат реечный Hi-lift 100см (сталь)",presence:"false"},
+                                    {img:"../../assets/top-products/Rectangle 48.png",price:"10 360",name:"Домкрат Low-down 120см (чугун)",presence:"true"},
+                                    {img:"../../assets/top-products/Rectangle 46.png",price:"12 470",name:"Домкрат Low-down 125см (сталь)",presence:"true"},
+                                    {img:"../../assets/top-products/Rectangle 47.png",price:"11 580",name:"Домкрат D 140см (сталь)",presence:"false"},
+                                    {img:"../../assets/top-products/Rectangle 48.png",price:"10 690",name:"Домкрат S 150см (сталь)",presence:"true"}
+                                    ]
+                            each i in arr
+                                .slider__item.carousel-item
+                                    +productCard(i.img,i.price,i.name, i.presence)
+        article.about
+            .about__wrap
+                include ../blocks/about.pug
+        article.news
+            h1.news__title Новости
+            .container-slider
+                .slider-news
+                    button.slider__control(href="#" data-slide="prev")
+                    .slider__container
+                        .carousel.carousel-news
+                            each i in [0,1,2,3,4]
+                                .slider__item.carousel-item
+                                    include ../../components/news-card/news-card.pug
+
+                    button.slider__control(href="#" data-slide="next")
+        footer.footer
+            header.footer__header.footer-header
+                include ../blocks/footer/footer-header.pug
+
+            footer.footer__footer.footer-footer
+                include ../blocks/footer/footer-footer.pug
+            footer.developer
+                .developer__wrap Разработано Ruws

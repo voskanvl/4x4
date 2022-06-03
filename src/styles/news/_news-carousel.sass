@@ -1,0 +1,31 @@
+@import "../_consts"
+.news-carousel
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &__controlsleft, &__controlsright
+        border: none
+        background: none
+        cursor: pointer
+        flex: 0 0
+    &__controlsleft
+        padding: 0 45px 0 16px
+    &__controlsright
+        padding: 0 16px 0 45px
+    &__cardsgroup
+        // display: flex
+        // justify-content: flex-start
+        // gap: 27px
+        overflow: auto
+        // & > .news-card:not(:last-child)
+        //     margin-right: 27px
+        &::-webkit-scrollbar
+            display: none
+        &::-moz-scrollbar
+            width: 0px
+            height: 0px
+
+    &__wrap
+        transition: 0.4s ease
+        white-space: nowrap
+        padding: 0.5rem 0
