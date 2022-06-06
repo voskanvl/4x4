@@ -1,5 +1,12 @@
 ul.head__right.main-menu
-    - const menuItems = ["О компании","Доставка и оплата","Как сделать заказ","Новости","Контакты"]
+    - 
+        const menuItems = [
+            { name: "О компании", href:"/about.html"},
+            { name: "Доставка и оплата", href:"#"},
+            { name: "Как сделать заказ", href:"#"},
+            { name: "Новости", href:"/news.html"},
+            { name: "Контакты", href:"#"}
+            ]
     each i in menuItems
         li.main-menu__item.main-menu__item-top
-            a(href="#")= i
+            a(href= i.href)= i.name

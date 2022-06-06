@@ -1,0 +1,15 @@
+extends ../layout/project.pug
+include ../../components/input/input.pug
+block main
+    main.news 
+        - const crumbs = [{name:"Главная",href:"/"},{name:"Новости",href:"/news.html"}]
+        .crumbs.news__crumbs
+            each i,idx in crumbs
+                if (idx<crumbs.length-1) 
+                    a(href= i.href)= i.name+" - "
+                else 
+                    a(href= i.href)= i.name
+        h1.news__title Новости
+        .news__list 
+            each i in [0,1,2,3,4,5]
+                include ../../components/news-card/news-card.pug

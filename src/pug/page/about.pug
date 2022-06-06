@@ -2,13 +2,13 @@ extends ../layout/project.pug
 include ../../components/input/input.pug
 block main
     main.about 
-        - const crumbs = ["Главная","О компании"]
+        - const crumbs = [{name:"Главная", href:"/"},{name:"О компании",href:"/about.html"}]
         .crumbs.about__crumbs
             each i,idx in crumbs
                 if (idx<crumbs.length-1) 
-                    a(href="#")= i+" - "
+                    a(href= i.href)= i.name+" - "
                 else 
-                    a(href="#")= i
+                    a(href= i.href)= i.name
         h1.about__title О компании
         .about__text 
             | Мы временно работаем в режиме интернет-магазина. Это означает, что пока к нам нельзя приехать и сразу забрать товар, 
