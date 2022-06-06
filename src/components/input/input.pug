@@ -1,4 +1,4 @@
-mixin input(name)
+mixin input(name, placeholder="")
     .input&attributes(attributes)
         label.input__label!= name
-        input.input__input
+        input.input__input(placeholder=placeholder)

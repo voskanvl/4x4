@@ -34,6 +34,7 @@ module.exports = {
         about: `${paths.src}/js/pages/about.js`,
         news: `${paths.src}/js/pages/news.js`,
         new: `${paths.src}/js/pages/new.js`,
+        account: `${paths.src}/js/pages/account.js`,
     },
     output: {
         path: paths.dist,

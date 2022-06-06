@@ -1,0 +1,30 @@
+extends ../layout/project.pug
+include ../../components/input/input.pug
+include ../../components/input/input.pug
+block main
+    main.account
+        aside.acount__menu
+            ul.catalog 
+                - menus=["Профиль","Мои заказы","Настройки", "Выйти"]
+                each i,idx in menus
+                    if i==="Профиль"
+                        +menuItem(i,idx,"true")
+                            ul.sub-menu__content
+                                li.catalog__item
+                                    .catalog__itembody
+                                        a(href="#") Редактировать профиль
+                    else
+                        +menuItem(i,idx)
+        .acount__main 
+            h1.account__title Профиль
+            .account__form 
+                .account__table
+                    - 
+                        const table = [
+                        {name:"Имя", placeholder:"Павел"},
+                        {name:"Фамилия", placeholder:"Герасимов"},
+                        {name:"Телефон", placeholder:"+7 (495) 027-68-08"},
+                        {name:"E-mail", placeholder:"oubr-5649@yopmail.com"}
+                        ]
+                    each i in table 
+                        +input(i.name, i.placeholder)
