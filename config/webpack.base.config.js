@@ -24,11 +24,6 @@ module.exports = {
     },
     //entry: `${paths.src}/index.js`,
     entry: {
-        // about: `${paths.src}/js/pages/about.js`,
-        // articles: `${paths.src}/js/pages/articles.js`,
-        // articles1: `${paths.src}/js/pages/articles.js`,
-        // blank: `${paths.src}/js/pages/blank.js`,
-        // contacts: `${paths.src}/js/pages/contacts.js`,
         index: `${paths.src}/js/pages/index.js`,
         category: `${paths.src}/js/pages/category.js`,
         product: `${paths.src}/js/pages/product.js`,
@@ -36,18 +31,8 @@ module.exports = {
         checkout: `${paths.src}/js/pages/checkout.js`,
         registration: `${paths.src}/js/pages/registration.js`,
         success: `${paths.src}/js/pages/success.js`,
-        // production: `${paths.src}/js/pages/production.js`,
-        // projects: `${paths.src}/js/pages/projects.js`,
+        about: `${paths.src}/js/pages/about.js`,
     },
-    // entry: {
-    //     ...PAGES.reduce(
-    //         (acc, page) => ({
-    //             ...acc,
-    //             page: `${paths.src}/js/pages/${page.split(".")[0]}.js`,
-    //         }),
-    //         {},
-    //     ),
-    // },
     output: {
         path: paths.dist,
         filename: "assets/js/[name].[contenthash].js",
