@@ -33,6 +33,7 @@ module.exports = {
         success: `${paths.src}/js/pages/success.js`,
         about: `${paths.src}/js/pages/about.js`,
         news: `${paths.src}/js/pages/news.js`,
+        new: `${paths.src}/js/pages/new.js`,
     },
     output: {
         path: paths.dist,
