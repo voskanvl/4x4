@@ -26,13 +26,13 @@ function start() {
         const carouselTopCarousel = M.Carousel.init(carouselTop, {
             indicators: false,
             numVisible: 3,
-            padding: 200,
+            padding: 41,
             fullWidth: true,
         });
         const carouselNoveltyCarousel = M.Carousel.init(carouselNovelty, {
             indicators: true,
             numVisible: 1,
-            padding: 400,
+            padding: 420,
             fullWidth: true,
         });
         const carouselNewsCarousel = M.Carousel.init(carouselNews, {
@@ -42,7 +42,8 @@ function start() {
             fullWidth: true,
         });
         restoreHeight();
-        window.addEventListener("resize", restoreHeight);
+        window.addEventListener("resize", () => setTimeout(restoreHeight, 200));
+
         //--- обработчики листания каруселей
         //--- для TOP
         const topPrev = document.querySelector(
