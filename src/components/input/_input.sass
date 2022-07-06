@@ -12,3 +12,14 @@
         width: 100%
         &:visited
             border: 1px solid green
+        &:invalid
+            border: 1px solid red
+
+        &[untouched]:invalid
+            border: none
+            & ~ .input__error
+                display: none
+    &__error
+        color: red
+        position: absolute
+        transform: translate(24em,-245%)
