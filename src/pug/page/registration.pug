@@ -17,18 +17,18 @@ block main
                     {name:"Повторите пароль", error: "Пароли не совпадают"},
                 ]
             each i in data.slice(0,4)
-                +input(i.name+'<span>*</span>')
-                .registration__error= i.error
+                +input(i.name+'<span>*</span>',i.error)(required="true" untouched="true")
+                //- .registration__error= i.error
             .registration__row 
                 +input(data[4].name)
                 +input(data[5].name)
             each i in data.slice(-3)
-                +input(i.name+'<span>*</span>')     
-                .registration__error= i.error
+                +input(i.name+'<span>*</span>',i.error)(required="true" untouched="true")     
+                //- .registration__error= i.error
 
             .registration__row.recaptcha 
                 p Здесь должна быть recaptcha
                 p После регистрации, на указанный Вами email придёт Ваш логин и пароль.
             
-            button.registration__login Зарегистрироваться
+            button.registration__login(type="submit") Зарегистрироваться
 

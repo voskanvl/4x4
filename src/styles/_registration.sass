@@ -2,12 +2,15 @@
 .registration
     +center
     flex-direction: column
+    margin-right: -1em
     &__form
-        width: 373px
+        max-width: 373px
+        margin: 0 auto
         & > *:not(:last-child)
             margin-bottom: 17px
-        & > .input span
-            color: red
+        & > .input
+            & span
+                color: red
 
     &__row
         +center
