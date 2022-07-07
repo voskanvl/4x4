@@ -1,6 +1,7 @@
 import "../../styles/style.sass";
 import "../bigButtonListener";
 import "../modal";
+import { counter } from "../counter";
 
 const bigButton = document.querySelector(".big-button");
 
@@ -75,4 +76,5 @@ function start() {
         //--- CLICK BigBUTTON
         document.querySelector(".big-button").click();
     }, 0);
+    counter();
 }
