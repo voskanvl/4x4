@@ -78,13 +78,20 @@ button[disable="true"]
 
 .slider__container
     width: 100%
+    & .slider__item
+        width: 251px
 .slider-novelty
-    width: 100%
+    width: 200px
+    @media screen and ( max-width: 1024px )
+        transform: translateY(-30px)
     & .indicators
         position: absolute
         bottom: 0
         padding: 0
         transform: translateY(150%)
+        @media screen and ( max-width: 1024px )
+            bottom: 43px
+
     & > .carousel-novelty
         overflow: unset
         // overflow-x: hidden
@@ -93,6 +100,8 @@ button[disable="true"]
 .slider-news
     display: flex
     align-items: center
+    & .carousel-news
+        height: 453px
 .slider__control
     height: 28px
     width: 28px
