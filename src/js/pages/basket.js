@@ -33,11 +33,14 @@ function start() {
     const controls = document.querySelectorAll(
         ".checkout-panel__controls > button",
     );
-    console.log("🚀 ~ controls", controls);
+    const routes = {
+        "checkout-panel__nonelogin": "/basket.html",
+        "checkout-panel__login": "/registration.html",
+    };
     controls.forEach(control =>
         control.addEventListener(
             "click",
-            () => (window.location.href = "/checkout.html"),
+            () => (window.location.href = routes[control.id]),
         ),
     );
 }
