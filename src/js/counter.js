@@ -15,7 +15,7 @@ export class Counter {
         this.monitor = this.#value;
     }
     dec() {
-        if (this.value < 2) return;
+        if (this.#value < 2) return;
         this.#value -= 1;
         this.monitor = this.#value;
     }

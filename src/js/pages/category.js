@@ -2,6 +2,7 @@ import "../../styles/style.sass";
 import "../../components/range/range";
 import "../bigButtonListener";
 import "../modal";
+import { counter } from "../counter";
 
 if (document.readyState === "loading") {
     console.log('document.readyState === "loading"');
@@ -23,4 +24,6 @@ function start() {
     });
     //--- CLICK BigBUTTON
     document.querySelector(".big-button").click();
+    //--- COUNTERS ---
+    counter();
 }

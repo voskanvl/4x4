@@ -1,6 +1,8 @@
 import "../../styles/style.sass";
 import "../bigButtonListener";
 import "../modal";
+import { counter } from "../counter";
+
 if (document.readyState === "loading") {
     console.log('document.readyState === "loading"');
     document.addEventListener("DOMContentLoaded", start);
@@ -43,4 +45,5 @@ function start() {
             () => (window.location.href = routes[control.id]),
         ),
     );
+    counter();
 }
