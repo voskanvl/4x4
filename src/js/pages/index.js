@@ -6,13 +6,8 @@ import { counter } from "../counter";
 const bigButton = document.querySelector(".big-button");
 
 //--- ON LOAD
-if (document.readyState === "loading") {
-    console.log('document.readyState === "loading"');
-    document.addEventListener("DOMContentLoaded", start);
-} else {
-    console.log('document.readyState !== "loading"');
-    start();
-}
+
+window.onload = start;
 function start() {
     setTimeout(() => {
         const catalog = document.querySelector(".catalog");
@@ -24,6 +19,7 @@ function start() {
         const carouselTop = document.querySelector(".carousel-top");
         const carouselNovelty = document.querySelector(".carousel-novelty");
         const carouselNews = document.querySelector(".carousel-news");
+
         const carouselTopCarousel = M.Carousel.init(carouselTop, {
             indicators: false,
             numVisible: 3,
