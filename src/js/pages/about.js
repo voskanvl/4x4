@@ -1,6 +1,7 @@
 import "../../styles/style.sass";
 import "../bigButtonListener";
 import "../modal";
+import initBeginCatalog from "../initBeginCatalog";
 // if (document.readyState === "loading") {
 //     console.log('document.readyState === "loading"');
 //     document.addEventListener("DOMContentLoaded", start);
@@ -8,8 +9,4 @@ import "../modal";
 //     console.log('document.readyState !== "loading"');
 //     start();
 // }
-window.onload = start;
-function start() {
-    //--- CLICK BigBUTTON
-    document.querySelector(".big-button").click();
-}
+initBeginCatalog();

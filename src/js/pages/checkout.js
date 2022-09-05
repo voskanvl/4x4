@@ -1,6 +1,7 @@
 import "../../styles/style.sass";
 import "../bigButtonListener";
 import "../modal";
+import initBeginCatalog from "../initBeginCatalog";
 // if (document.readyState === "loading") {
 //     console.log('document.readyState === "loading"');
 //     document.addEventListener("DOMContentLoaded", start);
@@ -8,18 +9,17 @@ import "../modal";
 //     console.log('document.readyState !== "loading"');
 //     start();
 // }
-window.onload = start;
-function start() {
-    const paymethdCheck = document.querySelector(".paymethod .checkbox");
-    //--- CLICK BigBUTTON
-    document.querySelector(".big-button").click();
-    paymethdCheck.parentElement.addEventListener("click", () => {
-        let { display } = paymethdCheck.style;
-        console.log("🚀 ~ display", display);
-        if (display === "none") {
-            paymethdCheck.style.display = "block";
-        } else {
-            paymethdCheck.style.display = "none";
-        }
-    });
-}
+
+const paymethdCheck = document.querySelector(".paymethod .checkbox");
+//--- CLICK BigBUTTON
+document.querySelector(".big-button").click();
+paymethdCheck.parentElement.addEventListener("click", () => {
+    let { display } = paymethdCheck.style;
+    console.log("🚀 ~ display", display);
+    if (display === "none") {
+        paymethdCheck.style.display = "block";
+    } else {
+        paymethdCheck.style.display = "none";
+    }
+});
+initBeginCatalog();

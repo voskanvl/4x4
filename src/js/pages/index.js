@@ -2,12 +2,14 @@ import "../../styles/style.sass";
 import "../bigButtonListener";
 import "../modal";
 import { counter } from "../counter";
+import initBeginCatalog from "../initBeginCatalog";
 
 const bigButton = document.querySelector(".big-button");
 
 //--- ON LOAD
 
-window.onload = start;
+// window.onload = start;
+start();
 function start() {
     setTimeout(() => {
         const catalog = document.querySelector(".catalog");
@@ -73,4 +75,8 @@ function start() {
         document.querySelector(".big-button").click();
     }, 0);
     counter();
+
+    //--- начальная установка отображения каталога
+    //--- по умолчанию должен быть выключен
+    initBeginCatalog();
 }
