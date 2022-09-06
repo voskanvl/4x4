@@ -1,7 +1,7 @@
 import "../../styles/style.sass";
 import "../bigButtonListener";
 import "../modal";
-initBeginCatalog();
+import initBeginCatalog from "../initBeginCatalog";
 
 const paymethdCheck = document.querySelector(".paymethod .checkbox");
 //--- CLICK BigBUTTON
