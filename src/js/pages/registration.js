@@ -5,7 +5,7 @@ import initBeginCatalog from "../initBeginCatalog";
 
 const paymethdCheck = document.querySelector(".paymethod .checkbox");
 //--- CLICK BigBUTTON
-document.querySelector(".big-button").click();
+// document.querySelector(".big-button").click();
 const form = document.querySelector("form.registration__form");
 form.addEventListener("click", ({ target }) => {
     if (target.tagName === "INPUT") {

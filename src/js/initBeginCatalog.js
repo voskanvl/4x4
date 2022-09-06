@@ -5,7 +5,7 @@ const initBeginCatalog = (time = 100) => {
         document.querySelector(".catalog"),
     ).opacity;
     setTimeout(() => {
-        if (match && opacity) bigButton.click();
+        // if (match && opacity) bigButton.click();
     }, time);
 };
 export default initBeginCatalog;

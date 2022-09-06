@@ -13,7 +13,7 @@ import initBeginCatalog from "../initBeginCatalog";
 //--- CLICK BigBUTTON
 const bigButton = document.querySelector(".big-button");
 const catalog = document.querySelector(".account__menu .catalog");
-bigButton.click();
+// bigButton.click();
 bigButton.addEventListener("click", () => (window.location = "/"));
 //--- TOOGLE CATALOG__ITEM ---
 catalog.addEventListener("click", ({ target }) => {

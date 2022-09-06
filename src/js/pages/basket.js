@@ -28,7 +28,7 @@ const clickHandler = ({ target }) => {
 };
 catalog.addEventListener("click", clickHandler);
 //--- CLICK BigBUTTON
-document.querySelector(".big-button").click();
+// document.querySelector(".big-button").click();
 //--- OPEN MODAL
 checkout.addEventListener("click", () => (modal.style.display = "flex"));
 close.addEventListener("click", () => (modal.style.display = "none"));

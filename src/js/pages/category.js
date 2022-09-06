@@ -24,7 +24,7 @@ catalog.addEventListener("click", ({ target }) => {
     }
 });
 //--- CLICK BigBUTTON
-document.querySelector(".big-button").click();
+// document.querySelector(".big-button").click();
 //--- COUNTERS ---
 counter();
 

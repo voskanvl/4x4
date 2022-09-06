@@ -12,7 +12,7 @@ import initBeginCatalog from "../initBeginCatalog";
 
 const paymethdCheck = document.querySelector(".paymethod .checkbox");
 //--- CLICK BigBUTTON
-document.querySelector(".big-button").click();
+// document.querySelector(".big-button").click();
 paymethdCheck.parentElement.addEventListener("click", () => {
     let { display } = paymethdCheck.style;
     console.log("🚀 ~ display", display);

@@ -73,6 +73,6 @@ main.mount();
 thumbnails.mount();
 window.splide = { main, thumbnails };
 //--- CLICK BigBUTTON
-document.querySelector(".big-button").click();
+// document.querySelector(".big-button").click();
 
 initBeginCatalog();

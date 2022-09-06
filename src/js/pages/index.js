@@ -72,7 +72,7 @@ function start() {
             }
         });
         //--- CLICK BigBUTTON
-        document.querySelector(".big-button").click();
+        // document.querySelector(".big-button").click();
     }, 0);
     counter();
 
