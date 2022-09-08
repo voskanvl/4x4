@@ -8,6 +8,7 @@
         "dev": "webpack serve --config ./config/webpack.dev.config.js --stats-children ",
         "build": "webpack --config ./config/webpack.build.config.js",
         "build & zip": "webpack --config ./config/webpack.build.config.js && tar -czvf  4x4.tar.gz ./dist",
+        "zip": "tar -czvf  4x4.tar.gz ./dist",
         "clean": "rd /s /q dist",
         "start": "serve ./dist"
     },
