@@ -1,4 +1,5 @@
 const tabs = document.querySelector(".product-description__tabs");
+if (!tabs) return;
 const bodies = document.querySelectorAll(
     ".product-description__body-container",
 );
