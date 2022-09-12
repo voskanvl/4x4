@@ -79,4 +79,30 @@ function start() {
     //--- начальная установка отображения каталога
     //--- по умолчанию должен быть выключен
     initBeginCatalog();
+
+    //--- mail subscribe
+    const inp = document.querySelector(".footer-header__input");
+    const submit = document.querySelector(".footer-header__submit");
+    const form = document.querySelector(".footer-header__form");
+
+    submit.addEventListener("click", e => {
+        e.preventDefault();
+        if (!form.checkValidity()) return inp.reportValidity();
+        fetch("/mail.php", { method: "POST", body: new FormData(form) }).then(
+            r => {
+                if (r.ok) inp.value = "";
+            },
+        );
+    });
+
+    // const validateEmail = value => {
+    //     console.log(value);
+    // };
+
+    // inp.addEventListener("change", ({ target: { value } }) =>
+    //     validateEmail(value),
+    // );
+    // inp.addEventListener("blur", ({ target: { value } }) =>
+    //     validateEmail(value),
+    // );
 }
