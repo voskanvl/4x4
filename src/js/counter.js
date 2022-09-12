@@ -5,8 +5,8 @@ export class Counter {
         this.#value = 1;
         this.plus = element.querySelector(".counter__plus");
         this.minus = element.querySelector(".counter__minus");
-        this.minus.addEventListener("click", () => this.dec());
-        this.plus.addEventListener("click", () => this.inc());
+        this.minus && this.minus.addEventListener("click", () => this.dec());
+        this.plus && this.plus.addEventListener("click", () => this.inc());
         this.#monitor = element.querySelector(".counter__value");
         this.getValue = this.getValue.bind(this);
     }
@@ -32,7 +32,8 @@ export class Counter {
 
 export function counter() {
     const counters = document.querySelectorAll(".counter");
-    counters.forEach(e => {
-        new Counter(e);
-    });
+    if (counters.length)
+        counters.forEach(e => {
+            new Counter(e);
+        });
 }
